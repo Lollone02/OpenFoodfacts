@@ -15,4 +15,11 @@ export class CiboService {
     return obsFood;
 
   }
+  getDetailsID(id:string){
+    const URL = `https://world.openfoodfacts.org/api/v0/product/${id}`;
+    const headers = new HttpHeaders("Content-Type");
+
+    let obsFood = this.http.get(URL, { headers });
+    return obsFood;
+  }
 }
