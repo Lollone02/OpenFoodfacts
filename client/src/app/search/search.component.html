@@ -5,3 +5,9 @@
   <button (click)="submit(newquery)">Search</button>
 </p>
 
+  <div *ngFor= "let a of results.products">
+    <h4>Nome Prodotto: <a [routerLink] = "['/prodotto', a.id]">{{a.product_name_fr}}</a></h4>
+    <img src="{{a.image_small_url}}" alt="Immagine non disponibile">
+  </div>
+
+
